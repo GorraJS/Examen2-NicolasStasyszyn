@@ -4,7 +4,7 @@ dPrimos = []
 dNoPrimos = []
 
 folderName = 'Downloads'
-folderPath = os.path.join(os.getcwd())
+folderPath = f'/home/gorra/Escritorio/Gorra/ITR/Programacion/EXAMENES/Examen 2/Act1/{folderName}'
 
 api = 'https://jsonplaceholder.typicode.com/todos/'
 
@@ -21,16 +21,18 @@ while(int(nPosts) > i ):
         getApi = requests.get(api2)
         jsonApi = getApi.json()
         
+        os.makedirs(folderPath, exist_ok=True)
+        
         if(jsonApi['id'] % 2 == 0):
-            dNoPrimos.append(jsonApi) 
+            dNoPrimos.append(jsonApi)
+            NoPrim = open('dlXNotPrimes.json', 'wb')
+            NoPrim.write(dNoPrimos)
+                
         else:
             dPrimos.append(jsonApi)
+            Prim = open('dlXPrimes.json', 'wb')
+            Prim.write(dPrimos)
 #print()
 #print(dNoPrimos)
 #print()
-#print(dPrimos)
-if not os.path.exists(folderPath):
-    os.makedirs(folderPath,folderName)
-    
-#with open(fileName, 'wb') as:
-    
+#print(dPrimos
