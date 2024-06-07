@@ -4,7 +4,7 @@ dPrimos = []
 dNoPrimos = []
 
 folderName = 'Downloads'
-folderPath = '/home/gorra/Escritorio/Gorra/ITR/Programacion/EXAMENES/Examen 2/'
+folderPath = os.path.join(os.getcwd())  
 
 api = 'https://jsonplaceholder.typicode.com/todos/'
 
