@@ -4,7 +4,7 @@ dPrimos = []
 dNoPrimos = []
 
 folderName = 'Downloads'
-folderPath = f'/home/gorra/Escritorio/Gorra/ITR/Programacion/EXAMENES/Examen 2/Act1/{folderName}'
+folderPath = '/home/gorra/Escritorio/Gorra/ITR/Programacion/EXAMENES/Examen 2/'
 
 api = 'https://jsonplaceholder.typicode.com/todos/'
 
@@ -25,13 +25,15 @@ while(int(nPosts) > i ):
         
         if(jsonApi['id'] % 2 == 0):
             dNoPrimos.append(jsonApi)
-            NoPrim = open('dlXNotPrimes.json', 'wb')
-            NoPrim.write(dNoPrimos)
+            noPrim = open('dlXNotPrimes.json', 'w') 
+            with noPrim as folderPath:
+                noPrim.write(str(dNoPrimos))
                 
         else:
             dPrimos.append(jsonApi)
-            Prim = open('dlXPrimes.json', 'wb')
-            Prim.write(dPrimos)
+            Prim = open('dlXPrimes.json', 'w') 
+            with Prim as folderPath:
+                Prim.write(str(dPrimos))
 #print()
 #print(dNoPrimos)
 #print()
