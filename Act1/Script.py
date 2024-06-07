@@ -27,14 +27,14 @@ while(int(nPosts) > i ):
             dNoPrimos.append(jsonApi)
             noPrim = open('dlXNotPrimes.json', 'w') 
             with noPrim as folderPath:
-                noPrim.write(str(dNoPrimos))
+                noPrim.write(str(dNoPrimos)) #MAL
                 
         else:
             dPrimos.append(jsonApi)
             Prim = open('dlXPrimes.json', 'w') 
             with Prim as folderPath:
-                Prim.write(str(dPrimos))
-#print()
-#print(dNoPrimos)
-#print()
-#print(dPrimos
+                Prim.write(str(dPrimos)) #MAL
+print()
+print(dNoPrimos)
+print()
+print(dPrimos)
